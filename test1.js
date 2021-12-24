@@ -1,4 +1,25 @@
+/*import { serve } from "https://deno.land/std@0.114.0/http/server.ts";
+
+function handler(req: Request): Response {
+  return new Response("Hello world");
+}
+
+console.log("Listening on http://localhost:8000");
+await serve(handler);
+*/
+
 import { serve } from "https://deno.land/std@0.114.0/http/server.ts";
+
+console.log("Listening on http://localhost:8000");
+serve((_req) => {
+  return new Response("Hello World!!!!???", {
+    headers: { "content-type": "text/plain" },
+  });
+});
+
+
+
+/*import { serve } from "https://deno.land/std@0.114.0/http/server.ts";
 
 function handler(req: Request): Response {
   return new Response("Hello world");
@@ -7,7 +28,7 @@ function handler(req: Request): Response {
 console.log("Listening on http://localhost:8000");
 await serve(handler);
 
-
+*/
 /**
  * webserver.ts
  */
